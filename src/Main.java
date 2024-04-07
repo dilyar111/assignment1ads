@@ -1,32 +1,28 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 import java.util.Scanner;
 
-import static com.sun.org.apache.xalan.internal.lib.ExsltMath.power;
-
-public class Main{
+public class Main {
 
     private static final Scanner scan = new Scanner(System.in);
 
-    public static void task1(){
+    public static void task1() {
         int n = scan.nextInt(), min = Integer.MAX_VALUE;
-        for(int i = 0; i < n;i++){
+        for(int i = 0; i < n; i++) {
             int a = scan.nextInt();
             if (min > a) min = a;
         }
         System.out.println(min);
     }
 
-    public static int task2(){
-        int n = scan.nextInt(), sum =0;
-        for (int i=0; i<n; i++){
-            int a = scan.nextInt(); sum+= a;
-            return  sum / n;
+    public static int task2() {
+        int n = scan.nextInt(), sum = 0;
+        for (int i = 0; i < n; i++) {
+            int a = scan.nextInt();
+            sum += a;
         }
-        System.out.println(task2());
+        double average = (double) sum / n;
+        System.out.println(average);
         return n;
     }
-
 
     public static boolean task3(int n) {
         if (n <= 1) return false;
@@ -36,54 +32,52 @@ public class Main{
         }
         return true;
     }
-    public static void main(String[] args) {
+    public static void task3() {
         int n = scan.nextInt();
-        Scanner sc = new Scanner(System.in);
-        System.out.println(n + (task3(n) ? " prime" : " composite"));
+        boolean isPrime = task3(n);
+        System.out.println(n + (isPrime ? " prime" : " composite"));
     }
 
-    public static int factorial(int n){
-        if(n<=1) return 1;
-        return factorial(n-1)*n;
+    public static int factorial(int n) {
+        if(n <= 1) return 1;
+        return factorial(n - 1) * n;
     }
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+
+    public static void factorial() {
         int n = scan.nextInt();
         int result = factorial(n);
         System.out.println(result);
     }
 
-    public static int fibonacciValue(int n){
-        if(n == 1 || n == 0){
-            return 1;
+    public static int fibonacciValue(int n) {
+        if(n <= 1) {
+            return n;
+        } else {
+            return fibonacciValue(n - 1) + fibonacciValue(n - 2);
         }
-        else
-            return fibonacciValue(n-1) + fibonacciValue(n-2);
-    }
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int n = scan.nextInt();
-        System.out.println(fibonacciValue(n));
     }
 
-    public static int power(int a, int n, int i){
+    public static void fibonacciValue() {
+        int n = scan.nextInt();
+        int fibonacciNumber = fibonacciValue(n);
+        System.out.println(fibonacciNumber);
+    }
+
+    public static int power(int a, int n) {
+        if(n == 0) {
+            return 1;
+        } else if(n < 0) {
+            return 1 / (a * power(a, -n));
+        } else {
+            return a * power(a, n - 1);
+        }
+    }
+
+    public static void power() {
         int a = scan.nextInt();
         int n = scan.nextInt();
-        if( n == 0) {
-            return 1;
-        }else if(n<0) {
-            return 1 / (a * power(a, -n, -1));
-        }else{
-                return a * power(a, n-1, -1);
-                }
-            }
-        }
-    public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
-        System.out.println(power(a , n, -1));
-        }
+        System.out.println(power(a, n));
     }
-
 
     public static void task7(String[] arr, int first, int end) {
         if (first >= end) {
@@ -95,13 +89,13 @@ public class Main{
 
         task7(arr, first + 1, end - 1);
     }
-    public static void main(String[] arr){
-        Scanner sc = new Scanner(System.in);
+
+    public static void task7() {
         System.out.println("len:");
-        int size = sc.nextInt();
+        int size = scan.nextInt();
         String[] arr = new String[size];
         for (int i = 0; i < size; i++) {
-            arr[i] = sc.next();
+            arr[i] = scan.next();
         }
         task7(arr, 0, arr.length - 1);
         System.out.println("Reversed:");
@@ -109,12 +103,14 @@ public class Main{
             System.out.print(element + " ");
         }
     }
-    public static boolean task8(String s, int i) {
+
+    public static boolean task8(String s) {
         if (s == null || s.isEmpty()) {
             return false;
         }
         return task8(s, 0);
     }
+
     private static boolean task8(String s, int index){
         if (index == s.length()) {
             return true;
@@ -123,13 +119,13 @@ public class Main{
 
         if (Character.isDigit(ch)) {
             return task8(s, index + 1);
-        }else{
+        } else {
             return false;
         }
     }
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        String s = sc.next();
+
+    public static void task8() {
+        String s = scan.next();
         if (task8(s, 0)) {
             System.out.println("yes");
         } else {
@@ -141,17 +137,16 @@ public class Main{
         if (k == 0 || k == n) {
             return 1;
         } else {
-            return task9(n - 1, k - 1) + task9(n - 1, k - 1);
+            return task9(n - 1, k - 1) + task9(n - 1, k);
         }
     }
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+
+    public static void task9() {
         int n = scan.nextInt();
         int k = scan.nextInt();
         long binomial = task9(n, k);
         System.out.println(binomial);
     }
-
 
     public static int task10(int a, int b) {
         if (b == 0) {
@@ -159,24 +154,23 @@ public class Main{
         }
         return task10(b, a % b);
     }
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+
+    public static void task10() {
         int a = scan.nextInt();
         int b = scan.nextInt();
         int gcd = task10(a, b);
         System.out.println(gcd);
     }
 
-
-    public static void main(String[] args){
+    public static void main(String[] args) {
         System.out.println("Enter task number:");
         int taskNumber = scan.nextInt();
-        switch (taskNumber){
+        switch (taskNumber) {
             case 1:
                 task1();
                 break;
             case 2:
-                task2();
+                System.out.println(task2());
                 break;
             case 3:
                 task3();
@@ -202,9 +196,8 @@ public class Main{
             case 10:
                 task10();
                 break;
-
-
+            default:
+                System.out.println("Invalid task number");
         }
     }
-
 }
