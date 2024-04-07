@@ -56,7 +56,6 @@ public class Main {
             return fibonacciValue(n - 1) + fibonacciValue(n - 2);
         }
     }
-
     public static void fibonacciValue() {
         int n = scan.nextInt();
         int fibonacciNumber = fibonacciValue(n);
@@ -72,7 +71,6 @@ public class Main {
             return a * power(a, n - 1);
         }
     }
-
     public static void power() {
         int a = scan.nextInt();
         int n = scan.nextInt();
@@ -89,7 +87,6 @@ public class Main {
 
         task7(arr, first + 1, end - 1);
     }
-
     public static void task7() {
         System.out.println("len:");
         int size = scan.nextInt();
@@ -110,7 +107,6 @@ public class Main {
         }
         return task8(s, 0);
     }
-
     private static boolean task8(String s, int index){
         if (index == s.length()) {
             return true;
@@ -123,7 +119,6 @@ public class Main {
             return false;
         }
     }
-
     public static void task8() {
         String s = scan.next();
         if (task8(s, 0)) {
@@ -140,7 +135,6 @@ public class Main {
             return task9(n - 1, k - 1) + task9(n - 1, k);
         }
     }
-
     public static void task9() {
         int n = scan.nextInt();
         int k = scan.nextInt();
@@ -154,7 +148,6 @@ public class Main {
         }
         return task10(b, a % b);
     }
-
     public static void task10() {
         int a = scan.nextInt();
         int b = scan.nextInt();
