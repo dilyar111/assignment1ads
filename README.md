@@ -1,8 +1,8 @@
 ## `task1()`
 
-**Description:** This method finds the minimum value among the entered numbers.
+This method finds the minimum value among the entered numbers.
 
-**How it works:** The method reads the number of values `n` using a `Scanner` object. Then it iteratively reads `n` numbers, finds the minimum value among them, and prints it.
+The method reads the number of values `n` using a `Scanner` object. Then it iteratively reads `n` numbers, finds the minimum value among them, and prints it.
 
 **Time Complexity:** O(n), where `n` is the number of entered values.
 
@@ -16,9 +16,9 @@
 
 ## `task2()`
 
-**Description:** This method calculates the average of the entered numbers.
+This method calculates the average of the entered numbers.
 
-**How it works:** The method reads the number of values `n` using a `Scanner` object. Then it iteratively reads `n` numbers, calculates their sum, computes the average value, and prints it. Finally, it returns the number of entered values `n`.
+ The method reads the number of values `n` using a `Scanner` object. Then it iteratively reads `n` numbers, calculates their sum, computes the average value, and prints it. Finally, it returns the number of entered values `n`.
 
 **Time Complexity:** O(n), where `n` is the number of entered values.
 
@@ -28,29 +28,13 @@
 **Return:**
 - `int`: the number of entered values.
 
----
 
-## `task3(int n)`
-
-**Description:** This method checks if a number is prime.
-
-**How it works:** The method takes an integer `n` as input. It checks if `n` is divisible by any number from 2 to the square root of `n`. If it finds a divisor, it returns `false` indicating that the number is composite. If no divisor is found, it returns `true` indicating that the number is prime.
-
-**Time Complexity:** O(√n), where `n` is the input number.
-
-**Parameters:**
-- `int n`: The number to check for primality.
-
-**Return:**
-- `boolean`: `true` if the number is prime, `false` if composite.
-
----
 
 ## `task3()`
 
-**Description:** This method checks if the entered number is prime.
+This method checks if the entered number is prime.
 
-**How it works:** The method reads a number using a `Scanner`. Then it calls the `task3(int n)` method, passing the entered number as an argument. Depending on the result, it prints "prime" if the number is prime, and "composite" if composite.
+ The method reads a number using a `Scanner`. Then it calls the `task3(int n)` method, passing the entered number as an argument. Depending on the result, it prints "prime" if the number is prime, and "composite" if composite.
 
 **Time Complexity:** O(√n), where `n` is the entered number.
 
@@ -62,6 +46,7 @@
 
 ```java
 /**
+## `task4()`
  * Calculates the factorial of a given integer.
  * 
  * This method recursively calculates the factorial of the input integer 'n' by
@@ -79,7 +64,6 @@ public static int factorial(int n) {
 }
 
 /**
- * Reads an integer from the standard input, calculates its factorial, and prints the result.
  */
 public static void factorial() {
     int n = scan.nextInt();
@@ -88,6 +72,7 @@ public static void factorial() {
 }
 
 /**
+## `task5()`
  * Calculates the Fibonacci value of a given integer.
  * 
  * This method recursively calculates the Fibonacci value of the input integer 'n'
@@ -116,6 +101,7 @@ public static void fibonacciValue() {
 }
 
 /**
+## `task6()`
  * Calculates the power of a given base to a given exponent.
  * 
  * This method recursively calculates the power of the input base 'a' to the input exponent 'n'.
@@ -137,6 +123,7 @@ public static int power(int a, int n) {
 }
 
 /**
+## `task7()`
  * Reads two integers from the standard input, calculates the power of the first integer to the second integer,
  * and prints the result.
  */
@@ -168,6 +155,7 @@ public static void task7(String[] arr, int first, int end) {
 }
 
 /**
+## `task8()`
  * Reads the size of an array and its elements from the standard input, reverses the order of elements in the array,
  * and prints the reversed array.
  */
@@ -187,6 +175,7 @@ public static void task7() {
 ```
 ```java
 /**
+
  * Checks if the input string consists of only digits.
  * 
  * This method recursively checks each character of the input string 's' starting from index 0.
@@ -207,8 +196,6 @@ public static boolean task8(String s) {
 }
 
 /**
- * Helper method for task8.
- * 
  * This method recursively checks each character of the input string 's' starting from the given index.
  * If the end of the string is reached, it returns true.
  * If the current character is a digit, it proceeds to check the next character recursively.
@@ -245,6 +232,7 @@ public static void task8() {
 }
 
 /**
+## `task9()`
  * Calculates the binomial coefficient C(n, k) using recursion.
  * 
  * This method calculates the binomial coefficient C(n, k) recursively using the formula:
@@ -276,6 +264,7 @@ public static void task9() {
 }
 
 /**
+## `task10()`
  * Calculates the greatest common divisor (GCD) of two integers using recursion.
  * 
  * This method calculates the GCD of two integers 'a' and 'b' recursively using the Euclidean algorithm.
@@ -304,20 +293,8 @@ public static void task10() {
     System.out.println(gcd);
 }
 ```
-## Main Method
-
-This method serves as the entry point for executing various tasks based on user input.
-
-- **Description**: Reads a task number from the user, executes the corresponding task method based on the number provided.
 - **Time Complexity**: The time complexity of this method is O(1) as it involves a constant number of operations regardless of the input size.
 - **Parameters**: None
 - **Returns**: None
 
-The method uses a `switch` statement to select and execute the appropriate task method based on the task number entered by the user. If an invalid task number is provided, it notifies the user about the error.
 
-The method follows the following structure:
-- If task number is 1, it executes `task1()`.
-- If task number is 2, it executes `task2()` and prints the returned average value.
-- If task number is 3, it executes `task3()` to determine if the input number is prime.
-- For task numbers 4 to 10, it calls corresponding methods: `factorial()`, `fibonacciValue()`, `power()`, `task7()`, `task8()`, `task9()`, and `task10()` respectively.
-- If an invalid task number is entered, it outputs a message indicating that the task number is not recognized.
