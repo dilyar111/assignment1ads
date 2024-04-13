@@ -157,10 +157,10 @@ public class Main {
 
     public static void counter(String s, char a , int index ) {
         int n = scan.nextInt(); int sum = 0;
-            if ( index > s.length()) {
+            if ( index >= s.length()) {
                 return 0;
             }
-            int
+            int count = s.charAt(index)
 
 
 
