@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Main {
-
+    
     private static final Scanner scan = new Scanner(System.in);
 
     public static void task1() {
@@ -155,6 +155,25 @@ public class Main {
         System.out.println(gcd);
     }
 
+    public static void counter(String s, char a , int index ) {
+        int n = scan.nextInt(); int sum = 0;
+            if ( index > s.length()) {
+                return 0;
+            }
+            int
+
+
+
+
+        }
+    }
+
+    public static void counter(){
+
+        System.out.println();
+
+    }
+
     public static void main(String[] args) {
         System.out.println("Enter task number:");
         int taskNumber = scan.nextInt();
@@ -188,6 +207,9 @@ public class Main {
                 break;
             case 10:
                 task10();
+                break;
+            case 11:
+                counter();
                 break;
             default:
                 System.out.println("Invalid task number");
